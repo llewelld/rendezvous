@@ -50,3 +50,7 @@ Reload the nginx config
 service nginx reload
 ```
 
+## Contributing
+
+We welcome comments and contributions to the project. If you're interested in contributing please see here: https://get.mypico.org/cla/
+
