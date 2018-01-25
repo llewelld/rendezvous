@@ -53,38 +53,7 @@ ln -s /etc/nginx/sites-available/rendezvous.conf /etc/nginx/sites-enabled/rendez
 
 Reload the nginx config
 ```
-service nginx reload.
-
-## Continuous Authentication Service
-
-The package installs the pico-continuous service to support continuous 
-authentication. Systemd support is included for managiing the service. The
-following commnds can be used.
-
-Check status:
-```
-systemctl status pico-continuous.service
-sudo journalctl -u pico-continous
-gdbus introspect --system --dest uk.ac.cam.cl.pico.service --object-path /PicoObject
-```
-
-Start, stop, reload, enable, disable:
-```
-systemctl start pico-continuous.service
-systemctl stop pico-continuous.service
-systemctl daemon-reload
-systemctl enable pico-continuous.service
-systemctl disable pico-continuous.service
-```
-
-The systemd unit configuration can be found at:
-```
-/lib/systemd/system/pico-continuous.service
-```
-
-The dbus policy that allows the service to use the system bus can be found at:
-```
-/etc/dbus-1/system.d/uk.ac.cam.cl.pico.service.conf
+service nginx reload
 ```
 
 ## License
